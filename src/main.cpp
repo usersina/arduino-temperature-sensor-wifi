@@ -2,10 +2,7 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
-// #define ONE_WIRE_BUS 8 // for arduino uno
-
-// GPIO where the DS18B20 is connected
-const int ONE_WIRE_BUS = 4;
+const int ONE_WIRE_BUS = 4; // GPIO4 (D2)
 
 OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensor(&oneWire);
