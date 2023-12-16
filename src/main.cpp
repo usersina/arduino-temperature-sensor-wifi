@@ -1,13 +1,28 @@
 #include <Arduino.h>
+#include <OneWire.h>
+#include <DallasTemperature.h>
 
+// #define ONE_WIRE_BUS 8 // for arduino uno
+
+// GPIO where the DS18B20 is connected
+const int ONE_WIRE_BUS = 4;
+
+OneWire oneWire(ONE_WIRE_BUS);
+DallasTemperature sensor(&oneWire);
+float Celsius = 0;
 
 void setup() {
-  pinMode(LED_BUILTIN, OUTPUT);
+  Serial.begin(9600);
+  
+  sensor.begin();
 }
 
 void loop() {
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(1000);                    
-  digitalWrite(LED_BUILTIN, LOW); 
-  delay(1000);                    
+  sensor.requestTemperaturesByIndex(0);
+  
+  Serial.print("Temperature: ");
+  Serial.print(sensor.getTempCByIndex(0));
+  Serial.println(" C");
+
+  delay(2000);
 }
