@@ -2,10 +2,11 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
 #include <ESP8266WiFi.h>
+#include <esp8266.h>
 
 const char* SSID = "Freenet";
 const char* PASSWORD = "";
-const int ONE_WIRE_BUS = 4; // GPIO4 (D2)
+const int ONE_WIRE_BUS = D2;
 
 OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensor(&oneWire);
