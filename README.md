@@ -1,6 +1,6 @@
-# NodeMCU ESP8266 Temperature Sensor WiFi
+# ESP8266 Temperature Sensor Firebase
 
-This project is about building a temperature sensor using the arduino framework as a base, and sends the data to a Firebase Realtime database at a regular interval.
+This projects demonstrates reading data from a temperature sensor and sending in to Firebase for real-time monitoring.
 
 ## Getting Started
 
