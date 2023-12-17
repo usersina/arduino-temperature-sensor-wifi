@@ -31,7 +31,9 @@ In addition to the hardware requirements, you also need to setup a [Firebase Rea
 
 ### Circuit Diagram
 
-todo
+![diagram](./media/diagram.png)
+
+Explore the [WOKWI Simulation](https://wokwi.com/projects/384349915243528193).
 
 ## Resources
 
