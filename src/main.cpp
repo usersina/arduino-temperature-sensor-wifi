@@ -1,4 +1,3 @@
-#include <Arduino.h>
 #include <DallasTemperature.h>
 #include <ESP8266WiFi.h>
 #include <Firebase_ESP_Client.h>
